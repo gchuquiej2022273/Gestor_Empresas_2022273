@@ -6,7 +6,8 @@ import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
 import userRoutes from "../src/users/user.routes.js";
-import authRoutes from "../src/auth/auth.routes.js"
+import authRoutes from "../src/auth/auth.routes.js";
+import companyRoutes from "../src/company/company.routes.js";
 
 class Server{
 
