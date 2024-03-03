@@ -1,7 +1,7 @@
 import Jwt from 'jsonwebtoken'
 import Usuario from '../users/user.model.js'
 
-export const validarJwt = async(req, res, next) =>{
+export const validarJwt = async (req, res, next) => {
     const token = req.header("x-token");
 
     if (!token) {
@@ -12,29 +12,29 @@ export const validarJwt = async(req, res, next) =>{
 
     try {
         const { uid } = Jwt.verify(token, process.env.privateKey);
-        const user = await Usuario.findById(uid);
+        const usuario = await Usuario.findById(uid);
 
-        if (!user){
-            return res.status(400).json({
+        if (!usuario) {
+            return res.status(401).json({
                 msg: "Usuario no existe en la base de datos"
             });
         }
 
-        if (!user.status) {
+        if (!usuario.status) {
             return res.status(401).json({
                 msg: "El usuario no existe en la base de datos"
             });
-        }        
+        }
 
-        req.user = user;
+        req.usuario = usuario;
 
         next();
     } catch (e) {
         console.log(e),
-        res.status(401).json({
-            msg: "Token no valido",
-        });
-        
+            res.status(401).json({
+                msg: "Token no valido",
+            });
+
     }
 
 }

@@ -16,6 +16,7 @@ class Server{
         this.port = process.env.PORT;
         this.userPath = '/companyG/v1/users';
         this.authRoutes = '/companyG/v1/auth';
+        this.empresaPath = '/companyG/v1/newCompany'
 
         this.middlewares();
         this.conectarDB();
@@ -37,6 +38,7 @@ class Server{
     routes(){
         this.app.use(this.userPath, userRoutes);
         this.app.use(this.authRoutes, authRoutes);
+        this.app.use(this.empresaPath, companyRoutes)
     }
 
     listen(){
