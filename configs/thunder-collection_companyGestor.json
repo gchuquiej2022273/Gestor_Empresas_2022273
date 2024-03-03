@@ -1,82 +1,151 @@
 {
     "client": "Thunder Client",
     "collectionName": "companyGestor",
-    "dateExported": "2024-02-28T23:29:34.790Z",
+    "dateExported": "2024-03-03T15:29:12.639Z",
     "version": "1.1",
     "folders": [
         {
-            "_id": "132c8161-07df-4562-acec-8c99491bef1e",
+            "_id": "26b86c41-78f3-4c37-8b4b-25270c664a64",
             "name": "userAdmins",
             "containerId": "",
-            "created": "2024-02-28T21:44:32.152Z",
+            "created": "2024-03-02T22:05:42.073Z",
             "sortNum": 10000
         },
         {
-            "_id": "1562e55d-5190-4af1-bbe4-01dfc96286d1",
+            "_id": "64e2d221-0ff6-4a24-bd73-007d2d7f53ab",
             "name": "auth",
             "containerId": "",
-            "created": "2024-02-28T21:44:42.109Z",
+            "created": "2024-03-02T22:05:42.074Z",
             "sortNum": 20000
         },
         {
-            "_id": "eee7a5e7-f034-467e-a109-9734d43f77d8",
+            "_id": "69844306-5147-4bff-aa37-618da056d1a6",
             "name": "company",
             "containerId": "",
-            "created": "2024-02-28T23:01:25.150Z",
+            "created": "2024-03-02T22:05:42.075Z",
             "sortNum": 30000
+        },
+        {
+            "_id": "7de7fe0e-6543-441c-b8e3-a6c11a9ca6f8",
+            "name": "reporte",
+            "containerId": "",
+            "created": "2024-03-03T03:07:39.321Z",
+            "sortNum": 40000
         }
     ],
     "requests": [
         {
-            "_id": "aa7d9742-c9ea-4aab-9362-81a24a969e35",
-            "colId": "4e196ccc-5ca5-45e0-ba29-df88fe228437",
-            "containerId": "132c8161-07df-4562-acec-8c99491bef1e",
+            "_id": "852646b0-a174-4f5a-aa3f-4095411953aa",
+            "colId": "de2658a7-3b19-4100-b6bb-236187478ac0",
+            "containerId": "26b86c41-78f3-4c37-8b4b-25270c664a64",
             "name": "newUser",
             "url": "http://localhost:3000/companyG/v1/users",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-26T22:16:56.042Z",
-            "modified": "2024-02-28T21:44:21.034Z",
+            "created": "2024-03-02T22:05:42.074Z",
+            "modified": "2024-03-02T23:07:20.350Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"sebastian\",\n  \"password\": \"12345678\",\n  \"email\": \"bramirez@gmail.com\"\n}",
+                "raw": "{\n  \"name\": \"brandon\",\n  \"password\": \"12345678\",\n  \"email\": \"Brandon@gmail.com\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "53f008a0-8492-45bd-ae2e-5140b2566589",
-            "colId": "4e196ccc-5ca5-45e0-ba29-df88fe228437",
-            "containerId": "eee7a5e7-f034-467e-a109-9734d43f77d8",
+            "_id": "a65e360e-68bc-4f8c-bb52-87f4fd37d7a0",
+            "colId": "de2658a7-3b19-4100-b6bb-236187478ac0",
+            "containerId": "69844306-5147-4bff-aa37-618da056d1a6",
             "name": "companyRegister",
-            "url": "",
+            "url": "http://localhost:3000/companyG/v1/newCompany/new",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-28T23:00:34.823Z",
-            "modified": "2024-02-28T23:01:32.074Z",
+            "created": "2024-03-02T22:05:42.076Z",
+            "modified": "2024-03-03T03:06:20.424Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzYjEyODcwNWRhMzJkMWE2ZjczNTEiLCJpYXQiOjE3MDk0MzQ5NTAsImV4cCI6MTcwOTQzODU1MH0.Wmv0qKFhn2SQAglP7GFCzi-2pnWk86g_qQrA7VcN7FQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameCompany\": \"Brandon y los loleros\",\n  \"trayectoria\": \"2023\",\n  \"levelImpacto\": \"alto\",\n  \"categiria\": \"Jugadores\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "67d1d528-9d5c-4b72-b855-69a25ef4d706",
+            "colId": "de2658a7-3b19-4100-b6bb-236187478ac0",
+            "containerId": "7de7fe0e-6543-441c-b8e3-a6c11a9ca6f8",
+            "name": "getReporte",
+            "url": "http://localhost:3000/companyG/v1/newCompany/report",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-03T02:54:52.158Z",
+            "modified": "2024-03-03T02:55:45.666Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "fcefad80-9a9e-4e1b-8f80-0cfc35223143",
-            "colId": "4e196ccc-5ca5-45e0-ba29-df88fe228437",
-            "containerId": "1562e55d-5190-4af1-bbe4-01dfc96286d1",
+            "_id": "1fa193f9-189c-415c-8532-b8c749823521",
+            "colId": "de2658a7-3b19-4100-b6bb-236187478ac0",
+            "containerId": "64e2d221-0ff6-4a24-bd73-007d2d7f53ab",
             "name": "login",
             "url": "http://localhost:3000/companyG/v1/auth/login",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-02-28T21:44:51.228Z",
-            "modified": "2024-02-28T21:53:03.802Z",
+            "created": "2024-03-02T22:05:42.075Z",
+            "modified": "2024-03-02T23:07:31.677Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"bramirez@gmail.com\",\n  \"password\": \"12345678\"\n}",
+                "raw": "{\n  \"email\": \"Brandon@gmail.com\",\n  \"password\": \"12345678\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "2df06bb5-9391-46c7-a1b4-9d18bbd83dfb",
+            "colId": "de2658a7-3b19-4100-b6bb-236187478ac0",
+            "containerId": "69844306-5147-4bff-aa37-618da056d1a6",
+            "name": "companyUpdate",
+            "url": "http://localhost:3000/companyG/v1/newCompany/65e3b4a605bc647b4c6344c9",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-03T00:49:55.081Z",
+            "modified": "2024-03-03T03:02:52.585Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzYjEyODcwNWRhMzJkMWE2ZjczNTEiLCJpYXQiOjE3MDk0MzQ5NTAsImV4cCI6MTcwOTQzODU1MH0.Wmv0qKFhn2SQAglP7GFCzi-2pnWk86g_qQrA7VcN7FQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameCompany\": \"Brandon y los loleros\",\n  \"trayectoria\": \"2023\",\n  \"levelImpacto\": \"alto\",\n  \"categiria\": \"Jugadores\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "614f51b9-f1d3-456b-a8a3-f76c3681b63b",
+            "colId": "de2658a7-3b19-4100-b6bb-236187478ac0",
+            "containerId": "69844306-5147-4bff-aa37-618da056d1a6",
+            "name": "ListCategoriaCompany",
+            "url": "http://localhost:3000/companyG/v1/newCompany",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-03T01:41:59.745Z",
+            "modified": "2024-03-03T01:44:50.235Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]
